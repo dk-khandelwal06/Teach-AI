@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #060913;
+    --bg-secondary: #0B1124;
+    --bg-surface: #0F172E;
+    --accent-cyan: #00F2FE;
+    --accent-teal: #0AE4BA;
+    --accent-amber: #F59E0B;
+    --accent-crimson: #EF4444;
+  }
+
+  body {
+    background-color: #060913;
+    color: #F1F5F9;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070B16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E294B;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glowing text and borders */
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.45);
+}
+
+.text-glow-teal {
+  text-shadow: 0 0 20px rgba(10, 228, 186, 0.45);
+}
+
+.text-glow-amber {
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.45);
+}
+
+.border-glow-cyan {
+  border-color: rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 20px -3px rgba(0, 242, 254, 0.25);
+}
+
+.border-glow-amber {
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 20px -3px rgba(245, 158, 11, 0.3);
+}
+
+/* Glassmorphism Card (subtle, non-excessive) */
+.glass-panel {
+  background: rgba(11, 17, 36, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-elevated {
+  background: rgba(15, 23, 46, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+}
+
+/* Animated gradient background */
+.bg-mesh-gradient {
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(0, 242, 254, 0.08) 0px, transparent 50%),
+    radial-gradient(at 85% 20%, rgba(10, 228, 186, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(99, 102, 241, 0.08) 0px, transparent 60%);
+}
+
+.bg-circuit-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtitle karaoke-style word highlighting */
+.subtitle-active-word {
+  color: #00F2FE;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
+  transform: scale(1.05);
+  display: inline-block;
+  transition: all 0.15s ease-out;
+}
+
+/* Pulse beacon */
+@keyframes signalPulse {
+  0% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.6); }
+  70% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 10px rgba(0, 242, 254, 0); }
+  100% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); }
+}
+
+.animate-signal-pulse {
+  animation: signalPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Electron flow animation */
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-flow-dash {
+  stroke-dasharray: 6, 6;
+  animation: flowDash 1.2s linear infinite;
+}
