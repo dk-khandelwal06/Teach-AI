@@ -24,12 +24,9 @@ Experience the deployed application — no setup required.
 
 ## 🎥 Demo
 
-Watch the complete Teach-AI walkthrough, including the teaching experience and the adaptive learning flow triggered by an intentionally wrong answer.
+Watch the complete Teach-AI walkthrough, including the AI teaching experience, student interaction, misconception detection, adaptive re-explanation, and final assessment.
 
-- [▶️ Watch the Demo Video](<./AI Innovation Hackathon 2026 Video.mp4>)
-- [⬇️ Open / Download Demo Video](<./AI Innovation Hackathon 2026 Video.mp4>)
-
-> GitHub does not reliably render inline `<video>` playback inside README files, so the links above open the actual MP4 committed to this repository (`AI Innovation Hackathon 2026 Video.mp4`) directly.
+https://github.com/user-attachments/assets/c6fcb9eb-1ffb-40f2-9fc5-4d0ae5db3be9
 
 ---
 
